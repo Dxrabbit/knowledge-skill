@@ -8,15 +8,15 @@
 
 #### 存入
 
-![截屏2026-03-20 13.59.06](/Users/dxrabbit/Desktop/截屏2026-03-20 13.59.06.png)
+![存入](./images/add.png)
 
 #### 复习
 
-![截屏2026-03-20 14.09.58](/Users/dxrabbit/Desktop/截屏2026-03-20 14.09.58.png)
+![复习](./images/review.png)
 
 #### 复习时间
 
-![截屏2026-03-20 14.14.15](/Users/dxrabbit/Desktop/截屏2026-03-20 14.14.15.png)
+![复习时间](./images/review-time.png)
 
 ## 快速开始
 
@@ -25,7 +25,7 @@
 **Claude Code 用户**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/knowledge-skill.git ~/.claude/skills/knowledge
+git clone https://github.com/Dxrabbit/knowledge-skill.git ~/.claude/skills/knowledge-skill
 ```
 
 重启 Claude Code，skill 会自动加载。
@@ -33,7 +33,7 @@ git clone https://github.com/YOUR_USERNAME/knowledge-skill.git ~/.claude/skills/
 **其他平台/独立使用**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/knowledge-skill.git
+git clone https://github.com/Dxrabbit/knowledge-skill.git
 cd knowledge-skill/scripts
 python3 knowledge.py stats
 ```
@@ -73,7 +73,7 @@ python3 knowledge.py setup
 #!/bin/bash
 if echo "$CLAUDE_USER_PROMPT" | grep -qi "知识库"; then
     content=$(echo "$CLAUDE_USER_PROMPT" | sed '"'"'s/加入.*知识库//g; s/添加到.*知识库//g'"'"')
-    python3 ~/.claude/skills/knowledge/scripts/knowledge.py auto-add "$content"
+    python3 ~/.claude/skills/knowledge-skill/scripts/knowledge.py auto-add "$content"
 fi
 '
 ```
@@ -133,10 +133,15 @@ CATEGORY_KEYWORDS = {
 ## 文件结构
 
 ```
-knowledge/
+knowledge-skill/
 ├── SKILL.md              # Claude Code 技能描述
 ├── README.md             # 本文件
 ├── LICENSE               # MIT 协议
+├── images/               # 截图
 └── scripts/
     └── knowledge.py      # 主程序
 ```
+
+---
+
+随手记，记得牢 🎯
