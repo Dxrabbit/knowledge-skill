@@ -142,6 +142,3 @@ knowledge-skill/
     └── knowledge.py      # 主程序
 ```
 
----
-
-随手记，记得牢 🎯
